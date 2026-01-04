@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - TechMart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>TechMart</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="blogs.html" class="active">Blogs</a>
+                    <a href="about.html">About</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Blog</h1>
+            <p>Stay updated with latest trends, tips, and news</p>
+        </div>
+    </section>
+
+    <!-- Featured Blog -->
+    <section class="featured-blog">
+        <div class="container">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop" alt="Featured Blog">
+                    <span class="blog-badge featured">Featured</span>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> January 4, 2026</span>
+                        <span><i class="fas fa-user"></i> Admin</span>
+                        <span><i class="fas fa-tag"></i> Technology</span>
+                    </div>
+                    <h2>Top 10 Must-Have Gadgets in 2026</h2>
+                    <p>Discover the latest technology trends and must-have gadgets that are revolutionizing the way we live and work. From AI-powered devices to smart home solutions, explore what's trending in the tech world...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blogs-section">
+        <div class="container">
+            <div class="blog-filter">
+                <h3>Filter by Category:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                    <button class="filter-btn" data-filter="tips">Shopping Tips</button>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card" data-category="technology">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Technology</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 3, 2026</span>
+                            <span><i class="fas fa-comment"></i> 24 Comments</span>
+                        </div>
+                        <h3>Smart Home Devices That Will Change Your Life</h3>
+                        <p>Transform your home into a smart haven with these innovative devices that offer convenience, security, and energy efficiency...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="fashion">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Fashion</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 2, 2026</span>
+                            <span><i class="fas fa-comment"></i> 18 Comments</span>
+                        </div>
+                        <h3>Winter Fashion Trends 2026</h3>
+                        <p>Stay stylish this winter with the latest fashion trends. From cozy sweaters to trendy boots, discover what's hot this season...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="tips">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Shopping Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 1, 2026</span>
+                            <span><i class="fas fa-comment"></i> 31 Comments</span>
+                        </div>
+                        <h3>10 Tips for Smart Online Shopping</h3>
+                        <p>Save money and shop smarter with these expert tips. Learn how to find the best deals and avoid common shopping mistakes...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="lifestyle">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Lifestyle</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 30, 2025</span>
+                            <span><i class="fas fa-comment"></i> 15 Comments</span>
+                        </div>
+                        <h3>Create Your Perfect Home Workspace</h3>
+                        <p>Working from home? Set up an inspiring and productive workspace with these essential items and design tips...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="technology">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Technology</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 28, 2025</span>
+                            <span><i class="fas fa-comment"></i> 42 Comments</span>
+                        </div>
+                        <h3>Best Laptops for Students in 2026</h3>
+                        <p>Find the perfect laptop for your studies with our comprehensive guide covering performance, battery life, and budget options...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="fashion">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Fashion</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 26, 2025</span>
+                            <span><i class="fas fa-comment"></i> 27 Comments</span>
+                        </div>
+                        <h3>Sustainable Fashion: A Complete Guide</h3>
+                        <p>Learn about eco-friendly fashion choices and discover brands that are making a positive impact on the environment...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="tips">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Shopping Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 24, 2025</span>
+                            <span><i class="fas fa-comment"></i> 19 Comments</span>
+                        </div>
+                        <h3>How to Identify Authentic Products Online</h3>
+                        <p>Protect yourself from counterfeit products with these expert tips on identifying genuine items when shopping online...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="lifestyle">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Lifestyle</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 22, 2025</span>
+                            <span><i class="fas fa-comment"></i> 36 Comments</span>
+                        </div>
+                        <h3>Fitness Gadgets for a Healthier 2026</h3>
+                        <p>Stay motivated and track your fitness goals with these innovative gadgets designed for health enthusiasts...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="technology">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop" alt="Blog">
+                        <span class="blog-badge">Technology</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 20, 2025</span>
+                            <span><i class="fas fa-comment"></i> 29 Comments</span>
+                        </div>
+                        <h3>The Future of AI in E-Commerce</h3>
+                        <p>Explore how artificial intelligence is transforming online shopping experiences and what to expect in the coming years...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates, articles, and special offers delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About TechMart</h3>
+                    <p>Your trusted online shopping destination for quality products at competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> support@techmart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechMart. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blogs.js"></script>
+</body>
+</html>

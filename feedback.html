@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - TechMart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>TechMart</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="about.html">About</a>
+                    <a href="feedback.html" class="active">Feedback</a>
+                    <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>We Value Your Feedback</h1>
+            <p>Help us serve you better</p>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-container">
+                <div class="feedback-form-section">
+                    <h2>Share Your Experience</h2>
+                    <p>Your feedback helps us improve our services and provide you with a better shopping experience.</p>
+                    
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" id="feedbackName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="feedbackEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="feedbackPhone">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Feedback Category *</label>
+                            <select id="feedbackCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="product">Product Quality</option>
+                                <option value="delivery">Delivery Service</option>
+                                <option value="customer-service">Customer Service</option>
+                                <option value="website">Website Experience</option>
+                                <option value="payment">Payment Issues</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rate Your Experience *</label>
+                            <div class="star-rating" id="starRating">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Feedback *</label>
+                            <textarea id="feedbackMessage" rows="6" required placeholder="Tell us more about your experience..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Upload Screenshot (Optional)</label>
+                            <input type="file" id="feedbackFile" accept="image/*">
+                            <small>Supported formats: JPG, PNG (Max 5MB)</small>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="allowContact">
+                                <span>Allow us to contact you regarding this feedback</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Feedback</button>
+                    </form>
+                </div>
+
+                <div class="feedback-info">
+                    <div class="info-card">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>Quick Response</h3>
+                        <p>We review all feedback within 24 hours and respond accordingly</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Confidential</h3>
+                        <p>Your feedback is kept confidential and used only for improvement</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Rewards</h3>
+                        <p>Get reward points for valuable feedback and suggestions</p>
+                    </div>
+
+                    <div class="contact-alternatives">
+                        <h3>Other Ways to Reach Us</h3>
+                        <div class="contact-option">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-option">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>feedback@techmart.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-option">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Live Chat</h4>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent service! The products arrived on time and the quality is outstanding. Will definitely shop again."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" alt="Customer">
+                        <div>
+                            <h4>Anjali Verma</h4>
+                            <span>Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best online shopping experience! Customer support is very helpful and responsive. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Customer">
+                        <div>
+                            <h4>Rahul Singh</h4>
+                            <span>Delhi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Great variety of products at competitive prices. The website is easy to navigate and checkout is smooth."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt="Customer">
+                        <div>
+                            <h4>Meera Patel</h4>
+                            <span>Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About TechMart</h3>
+                    <p>Your trusted online shopping destination for quality products at competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> support@techmart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechMart. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+</html>
