@@ -4012,3 +4012,391 @@ footer {
         min-width: 180px;
     }
 }
+
+/* ========================================
+   MODERN HOME PAGE ANIMATIONS & EFFECTS
+   ======================================== */
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.custom-cursor.cursor-hover {
+    transform: scale(1.5);
+    border-color: #6366F1;
+}
+
+.custom-cursor-dot.cursor-hover {
+    background: #6366F1;
+    transform: scale(1.5);
+}
+
+/* Smooth Scroll Animations */
+.animate-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-element.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading State */
+body:not(.loaded) {
+    overflow: hidden;
+}
+
+body:not(.loaded)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Scroll Effect */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Enhanced */
+.hero {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.1) 0%, transparent 70%);
+    animation: heroFloat 20s infinite alternate;
+}
+
+@keyframes heroFloat {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(50px, 50px) rotate(5deg); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    animation: fadeInUp 1s ease 0.3s backwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Category Cards 3D Tilt Effect */
+.category-card {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(99, 102, 241, 0.1));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.category-card i {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.category-card:hover i {
+    transform: scale(1.2) translateZ(20px);
+}
+
+/* Product Cards Advanced Effects */
+.product-card {
+    will-change: transform;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(29, 78, 216, 0.1) 100%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+.product-card:hover {
+    box-shadow: 0 20px 60px rgba(29, 78, 216, 0.2);
+}
+
+/* Ripple Effect */
+button, .btn-primary, .btn-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleAnimation 0.6s ease;
+    pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Floating Animation for Elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger Animation for Grids */
+.category-grid > *, .products-grid > * {
+    animation: staggerIn 0.6s ease backwards;
+}
+
+.category-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.category-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.category-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.category-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.category-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.category-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+.products-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.products-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.products-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.products-grid > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes staggerIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Gradient Animation */
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Shine Effect on Hover */
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.shine-effect:hover::before {
+    left: 100%;
+}
+
+/* Smooth Hover Transitions */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Product Actions */
+.product-actions {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Text Selection Style */
+::selection {
+    background: rgba(29, 78, 216, 0.2);
+    color: var(--text-dark);
+}
+
+::-moz-selection {
+    background: rgba(29, 78, 216, 0.2);
+    color: var(--text-dark);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Add bounce effect to buttons */
+.btn-primary, .btn-secondary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:active, .btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* Glow effect on focus */
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+/* Page transitions */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) {
+    .custom-cursor, .custom-cursor-dot {
+        display: none;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .animate-element {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .category-card:hover {
+        transform: none !important;
+    }
+    
+    .product-card:hover {
+        transform: none !important;
+    }
+}
