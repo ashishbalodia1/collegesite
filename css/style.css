@@ -1,17 +1,17 @@
-/* Professional Blue-Purple Theme */
+/* Softer Blue Theme - Easy on Eyes */
 :root {
-    --primary: #1D4ED8;
-    --primary-dark: #1D4ED8;
-    --primary-light: #1D4ED8;
-    --text-dark: #1F2937;
+    --primary: #4F83CC;
+    --primary-dark: #3B6BA8;
+    --primary-light: #7DA8DE;
+    --text-dark: #2C3E50;
     --text-light: #6B7280;
-    --text-lighter: #9CA3AF;
-    --bg-light: #F9FAFB;
+    --text-lighter: #95A5A6;
+    --bg-light: #F8F9FA;
     --white: #FFFFFF;
     --border: #E5E7EB;
-    --shadow: 0 1px 3px rgba(0,0,0,0.12);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.08);
 }
 
 * {
@@ -547,7 +547,7 @@ footer {
 .page-header {
     text-align: center;
     padding: 80px 0 60px;
-    background: linear-gradient(135deg, #1D4ED8 0%, #6366F1 100%);
+    background: linear-gradient(135deg, #4F83CC 0%, #6366F1 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1936,7 +1936,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #1D4ED8 0%, #6366F1 50%, #8B5CF6 100%);
+    background: linear-gradient(135deg, #4F83CC 0%, #6366F1 50%, #8B5CF6 100%);
     position: relative;
     overflow: hidden;
 }
@@ -2531,14 +2531,14 @@ footer {
 .chatbot-toggle {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+    background: linear-gradient(135deg, #4F83CC, #3B6BA8);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 24px;
-    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.4);
+    box-shadow: 0 8px 24px rgba(79, 131, 204, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -2552,7 +2552,7 @@ footer {
 
 .chatbot-toggle:hover {
     transform: scale(1.1);
-    box-shadow: 0 12px 32px rgba(29, 78, 216, 0.6);
+    box-shadow: 0 12px 32px rgba(79, 131, 204, 0.6);
     animation: none;
 }
 
@@ -2587,7 +2587,7 @@ footer {
 }
 
 .chatbot-header {
-    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+    background: linear-gradient(135deg, #4F83CC, #3B6BA8);
     color: white;
     padding: 20px;
     display: flex;
@@ -2679,7 +2679,7 @@ footer {
 .message-avatar {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+    background: linear-gradient(135deg, #4F83CC, #3B6BA8);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2762,13 +2762,13 @@ footer {
 
 .chatbot-input input:focus {
     outline: none;
-    border-color: #1D4ED8;
+    border-color: #4F83CC;
 }
 
 .chatbot-send {
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+    background: linear-gradient(135deg, #4F83CC, #3B6BA8);
     border: none;
     border-radius: 12px;
     color: white;
@@ -2782,7 +2782,7 @@ footer {
 
 .chatbot-send:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+    box-shadow: 0 4px 12px rgba(79, 131, 204, 0.4);
 }
 
 /* Profile Page */
@@ -3195,7 +3195,7 @@ footer {
 
 .badge-success {
     padding: 8px 16px;
-    background: #1D4ED8;
+    background: #4F83CC;
     color: white;
     border-radius: 20px;
     font-size: 12px;
@@ -4084,7 +4084,7 @@ body:not(.loaded)::before {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(29, 78, 216, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(79, 131, 204, 0.1) 0%, transparent 70%);
     animation: heroFloat 20s infinite alternate;
 }
 
@@ -4142,7 +4142,7 @@ body:not(.loaded)::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(99, 102, 241, 0.1));
+    background: linear-gradient(135deg, rgba(79, 131, 204, 0.1), rgba(99, 102, 241, 0.1));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -4179,7 +4179,7 @@ body:not(.loaded)::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, transparent 0%, rgba(29, 78, 216, 0.1) 100%);
+    background: linear-gradient(135deg, transparent 0%, rgba(79, 131, 204, 0.1) 100%);
     border-radius: inherit;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -4191,7 +4191,7 @@ body:not(.loaded)::before {
 }
 
 .product-card:hover {
-    box-shadow: 0 20px 60px rgba(29, 78, 216, 0.2);
+    box-shadow: 0 20px 60px rgba(79, 131, 204, 0.2);
 }
 
 /* Ripple Effect */
@@ -4308,12 +4308,12 @@ button, .btn-primary, .btn-secondary {
 
 /* Text Selection Style */
 ::selection {
-    background: rgba(29, 78, 216, 0.2);
+    background: rgba(79, 131, 204, 0.2);
     color: var(--text-dark);
 }
 
 ::-moz-selection {
-    background: rgba(29, 78, 216, 0.2);
+    background: rgba(79, 131, 204, 0.2);
     color: var(--text-dark);
 }
 
@@ -4346,7 +4346,7 @@ button, .btn-primary, .btn-secondary {
 
 /* Glow effect on focus */
 input:focus, textarea:focus, select:focus {
-    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+    box-shadow: 0 0 0 3px rgba(79, 131, 204, 0.1);
 }
 
 /* Page transitions */
