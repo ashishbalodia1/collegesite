@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - TechMart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>TechMart</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="about.html">About</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>My Profile</h1>
+            <p>Manage your account settings and preferences</p>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <!-- Profile Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar" id="profileAvatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 id="profileName">User Name</h3>
+                        <p id="profileEmail">user@example.com</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-shopping-bag"></i>
+                                <div>
+                                    <strong>12</strong>
+                                    <span>Orders</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <strong>8</strong>
+                                    <span>Wishlist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-menu">
+                        <a href="#" class="menu-item active" data-section="personal">
+                            <i class="fas fa-user"></i>
+                            <span>Personal Info</span>
+                        </a>
+                        <a href="#" class="menu-item" data-section="security">
+                            <i class="fas fa-lock"></i>
+                            <span>Security</span>
+                        </a>
+                        <a href="#" class="menu-item" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Addresses</span>
+                        </a>
+                        <a href="#" class="menu-item" data-section="orders">
+                            <i class="fas fa-box"></i>
+                            <span>Orders</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- Personal Info Section -->
+                    <div class="content-section active" id="personal">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <p>Update your personal details</p>
+                        </div>
+
+                        <form id="profileForm" class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" id="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="date" id="dob">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select id="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Bio</label>
+                                <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save"></i> Save Changes
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Security Section -->
+                    <div class="content-section" id="security">
+                        <div class="section-header">
+                            <h2>Security Settings</h2>
+                            <p>Manage your password and security preferences</p>
+                        </div>
+
+                        <form id="passwordForm" class="profile-form">
+                            <div class="form-group">
+                                <label>Current Password *</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>New Password *</label>
+                                <input type="password" id="newPassword" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Confirm New Password *</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+
+                            <div class="password-requirements">
+                                <h4>Password Requirements:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> At least 8 characters long</li>
+                                    <li><i class="fas fa-check-circle"></i> Contains uppercase and lowercase letters</li>
+                                    <li><i class="fas fa-check-circle"></i> Contains at least one number</li>
+                                    <li><i class="fas fa-check-circle"></i> Contains special characters</li>
+                                </ul>
+                            </div>
+
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-lock"></i> Update Password
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Addresses Section -->
+                    <div class="content-section" id="addresses">
+                        <div class="section-header">
+                            <h2>Saved Addresses</h2>
+                            <p>Manage your delivery addresses</p>
+                        </div>
+
+                        <div class="addresses-grid">
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <span class="badge-primary">Home</span>
+                                    <div class="address-actions">
+                                        <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <h4>John Doe</h4>
+                                <p>123 Main Street, Apartment 4B</p>
+                                <p>Mumbai, Maharashtra 400001</p>
+                                <p>Phone: +91 98765 43210</p>
+                            </div>
+
+                            <div class="address-card add-address">
+                                <i class="fas fa-plus"></i>
+                                <h4>Add New Address</h4>
+                                <p>Click to add a new delivery address</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="content-section" id="orders">
+                        <div class="section-header">
+                            <h2>Order History</h2>
+                            <p>Track and manage your orders</p>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Order #ORD-2026-001</h4>
+                                        <p>Placed on Jan 2, 2026</p>
+                                    </div>
+                                    <span class="badge-success">Delivered</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>3 items • ₹3,499</p>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-outline">View Details</button>
+                                    <button class="btn-outline">Download Invoice</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Order #ORD-2025-098</h4>
+                                        <p>Placed on Dec 28, 2025</p>
+                                    </div>
+                                    <span class="badge-warning">In Transit</span>
+                                </div>
+                                <div class="order-items">
+                                    <p>1 item • ₹1,299</p>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-outline">Track Order</button>
+                                    <button class="btn-outline">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About TechMart</h3>
+                    <p>Your trusted online shopping destination for quality products at competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> support@techmart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechMart. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth-protection.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

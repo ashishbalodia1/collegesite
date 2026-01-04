@@ -1,48 +1,13 @@
-// Authentication Protection System
-// This script protects pages from unauthorized access
+// Authentication Navigation System
+// This script updates navigation based on login status
 
 (function() {
     'use strict';
-    
-    // Pages that don't require authentication
-    const publicPages = [
-        'index.html',
-        'login.html',
-        '/'  // Root path
-    ];
-    
-    // Check if current page is public
-    function isPublicPage() {
-        const currentPath = window.location.pathname;
-        const currentPage = currentPath.split('/').pop() || 'index.html';
-        
-        return publicPages.some(page => 
-            currentPage === page || 
-            currentPage === '' || 
-            currentPath === '/' ||
-            currentPath.endsWith('/')
-        );
-    }
     
     // Check if user is authenticated
     function isAuthenticated() {
         const user = localStorage.getItem('techmart_user');
         return user !== null && user !== undefined;
-    }
-    
-    // Redirect to login page
-    function redirectToLogin() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        localStorage.setItem('redirect_after_login', currentPage);
-        
-        // Show toast message
-        if (typeof TechMart !== 'undefined' && TechMart.showToast) {
-            TechMart.showToast('Please login to access this page', 'error');
-        }
-        
-        setTimeout(() => {
-            window.location.href = 'login.html';
-        }, 500);
     }
     
     // Update navigation based on auth status
@@ -91,7 +56,7 @@
                 </div>
             </div>
             <div class="user-dropdown-menu">
-                <a href="#" class="dropdown-item" onclick="alert('Profile page coming soon!')">
+                <a href="profile.html" class="dropdown-item">
                     <i class="fas fa-user"></i> My Profile
                 </a>
                 <a href="#" class="dropdown-item" onclick="alert('Orders page coming soon!')">
@@ -148,26 +113,16 @@
         }, 500);
     }
     
-    // Main protection logic
-    function protectPage() {
-        // If on a protected page and not authenticated, redirect to login
-        if (!isPublicPage() && !isAuthenticated()) {
-            redirectToLogin();
-            return;
-        }
-        
-        // Update navigation for all pages
+    // Main logic - just update navigation
+    function init() {
         updateNavigation();
     }
     
-    // Run protection when DOM is loaded
+    // Run when DOM is loaded
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', protectPage);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        protectPage();
+        init();
     }
-    
-    // Also run immediately to prevent page flash
-    protectPage();
     
 })();
