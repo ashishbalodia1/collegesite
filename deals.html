@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Deals - TechMart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>TechMart</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="about.html">About</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="wishlist.html" class="wishlist-btn"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="deals-page">
+        <!-- Hero Banner -->
+        <section class="deals-hero">
+            <div class="container">
+                <div class="deals-hero-content">
+                    <div class="hero-badge">🎓 STUDENTS ONLY</div>
+                    <h1>Exclusive Student Deals</h1>
+                    <p>Up to 50% off on electronics, books, and more!</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>20%</h3>
+                            <p>Instant Discount</p>
+                        </div>
+                        <div class="stat">
+                            <h3>EMI</h3>
+                            <p>Starting ₹999/mo</p>
+                        </div>
+                        <div class="stat">
+                            <h3>FREE</h3>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Active Offers -->
+            <section class="active-offers">
+                <h2><i class="fas fa-tag"></i> Active Offers</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">POPULAR</div>
+                        <div class="offer-icon">🎒</div>
+                        <h3>STUDENT20</h3>
+                        <p class="offer-desc">Get 20% off on all electronics</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid till Dec 31</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹1999</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="STUDENT20">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge hot">HOT</div>
+                        <div class="offer-icon">📱</div>
+                        <h3>MOBILE15</h3>
+                        <p class="offer-desc">Extra 15% off on smartphones</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid for 3 days</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹9999</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="MOBILE15">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge new">NEW</div>
+                        <div class="offer-icon">📚</div>
+                        <h3>BOOKS30</h3>
+                        <p class="offer-desc">30% off on all books & stationery</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid today</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹499</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="BOOKS30">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">SPECIAL</div>
+                        <div class="offer-icon">💻</div>
+                        <h3>LAPTOP10</h3>
+                        <p class="offer-desc">10% off + EMI options on laptops</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid this month</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹25000</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="LAPTOP10">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">CASHBACK</div>
+                        <div class="offer-icon">🎧</div>
+                        <h3>AUDIO25</h3>
+                        <p class="offer-desc">25% off on headphones & speakers</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid for 1 week</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹999</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="AUDIO25">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-badge">MEGA</div>
+                        <div class="offer-icon">⌚</div>
+                        <h3>WATCH20</h3>
+                        <p class="offer-desc">20% off on smartwatches</p>
+                        <div class="offer-details">
+                            <span><i class="fas fa-calendar"></i> Valid till weekend</span>
+                            <span><i class="fas fa-rupee-sign"></i> Min ₹2999</span>
+                        </div>
+                        <button class="btn-copy-code" data-code="WATCH20">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Deals -->
+            <section class="category-deals">
+                <h2><i class="fas fa-percentage"></i> Deals by Category</h2>
+                <div class="category-cards">
+                    <div class="category-deal-card">
+                        <div class="category-deal-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Laptops">
+                            <div class="category-discount">Up to 40% OFF</div>
+                        </div>
+                        <div class="category-deal-content">
+                            <h3>Laptops & Computers</h3>
+                            <p>Perfect for projects & assignments</p>
+                            <a href="index.html" class="btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+
+                    <div class="category-deal-card">
+                        <div class="category-deal-image">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="Books">
+                            <div class="category-discount">Up to 30% OFF</div>
+                        </div>
+                        <div class="category-deal-content">
+                            <h3>Books & Stationery</h3>
+                            <p>All academic & reference books</p>
+                            <a href="index.html" class="btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+
+                    <div class="category-deal-card">
+                        <div class="category-deal-image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400" alt="Phones">
+                            <div class="category-discount">Up to 25% OFF</div>
+                        </div>
+                        <div class="category-deal-content">
+                            <h3>Smartphones</h3>
+                            <p>Latest models with EMI options</p>
+                            <a href="index.html" class="btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+
+                    <div class="category-deal-card">
+                        <div class="category-deal-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Accessories">
+                            <div class="category-discount">Up to 50% OFF</div>
+                        </div>
+                        <div class="category-deal-content">
+                            <h3>Accessories</h3>
+                            <p>Headphones, cases, chargers</p>
+                            <a href="index.html" class="btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EMI Options -->
+            <section class="emi-section">
+                <div class="emi-content">
+                    <div class="emi-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="emi-text">
+                        <h2>No Cost EMI Available</h2>
+                        <p>Buy now, pay later with easy monthly installments starting ₹999</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> No credit card required</li>
+                            <li><i class="fas fa-check"></i> 0% interest on selected products</li>
+                            <li><i class="fas fa-check"></i> Flexible tenure - 3, 6, 9 months</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Benefits -->
+            <section class="student-benefits">
+                <h2><i class="fas fa-graduation-cap"></i> Why Students Love Us</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3>Exclusive Discounts</h3>
+                        <p>Up to 20% off on all products with student verification</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Free Delivery</h3>
+                        <p>No delivery charges on orders above ₹500</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure Payments</h3>
+                        <p>100% safe & secure payment options</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-undo"></i>
+                        <h3>Easy Returns</h3>
+                        <p>7-day return policy, no questions asked</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechMart</h3>
+                    <p>Your one-stop shop for all electronics and gadgets. Special student discounts available!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 1234567890</li>
+                        <li><i class="fas fa-envelope"></i> support@techmart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechMart. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/deals.js"></script>
+</body>
+</html>

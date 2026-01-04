@@ -2679,3 +2679,441 @@ var(--gradient-primary);
         justify-content: center;
     }
 }
+
+/* Deals Page Styles */
+.deals-page {
+    min-height: 100vh;
+    background: var(--bg-light);
+}
+
+/* Deals Hero */
+.deals-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #1e5bb8 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.deals-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.1;
+}
+
+.deals-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.deals-hero .hero-badge {
+    background: var(--secondary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+.deals-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.deals-hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.hero-stats .stat {
+    text-align: center;
+}
+
+.hero-stats .stat h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hero-stats .stat p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Active Offers Section */
+.active-offers {
+    padding: 80px 0 40px;
+}
+
+.active-offers h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.active-offers h2 i {
+    color: var(--secondary);
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.offer-badge.hot {
+    background: var(--danger);
+    animation: pulse 1.5s infinite;
+}
+
+.offer-badge.new {
+    background: var(--success);
+}
+
+.offer-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.offer-card h3 {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.offer-desc {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.offer-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    border-top: 1px solid var(--bg-light);
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.offer-details span {
+    font-size: 13px;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-copy-code {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-copy-code:hover {
+    background: #1e5bb8;
+    transform: scale(1.02);
+}
+
+/* Category Deals */
+.category-deals {
+    padding: 40px 0 80px;
+}
+
+.category-deals h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-deals h2 i {
+    color: var(--success);
+}
+
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.category-deal-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.category-deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.category-deal-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.category-deal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-deal-card:hover .category-deal-image img {
+    transform: scale(1.1);
+}
+
+.category-discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--danger);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.category-deal-content {
+    padding: 25px;
+}
+
+.category-deal-content h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.category-deal-content p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.category-deal-content .btn-primary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* EMI Section */
+.emi-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    margin: 60px 0;
+    border-radius: 16px;
+}
+
+.emi-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.emi-icon {
+    font-size: 80px;
+    flex-shrink: 0;
+}
+
+.emi-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.emi-text p {
+    font-size: 16px;
+    opacity: 0.95;
+    margin-bottom: 20px;
+}
+
+.emi-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.emi-text ul li {
+    padding: 8px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.emi-text ul li i {
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+/* Student Benefits */
+.student-benefits {
+    padding: 60px 0 80px;
+}
+
+.student-benefits h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.student-benefits h2 i {
+    color: var(--primary);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.benefit-card i {
+    font-size: 48px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Responsive Deals Page */
+@media (max-width: 768px) {
+    .deals-hero h1 {
+        font-size: 32px;
+    }
+    
+    .deals-hero p {
+        font-size: 16px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .offers-grid,
+    .category-cards,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .emi-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .emi-icon {
+        font-size: 60px;
+    }
+    
+    .emi-text ul li {
+        justify-content: center;
+    }
+}
