@@ -159,51 +159,102 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(statsSection);
     }
 
-    // Cursor Custom Effect (Optional - Modern websites have custom cursors)
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
+    // Animated Wiring/Connection Lines Effect
+    const canvas = document.createElement('canvas');
+    canvas.id = 'wireframe-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '1';
+    canvas.style.opacity = '0.6';
+    document.body.insertBefore(canvas, document.body.firstChild);
 
-    const cursorDot = document.createElement('div');
-    cursorDot.className = 'custom-cursor-dot';
-    document.body.appendChild(cursorDot);
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationFrameId;
 
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    let dotX = 0, dotY = 0;
-
-    document.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animateCursor() {
-        // Smooth follow effect
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-        dotX += (mouseX - dotX) * 0.15;
-        dotY += (mouseY - dotY) * 0.15;
-
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-        cursorDot.style.left = dotX + 'px';
-        cursorDot.style.top = dotY + 'px';
-
-        requestAnimationFrame(animateCursor);
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
-    animateCursor();
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    // Cursor interactions
-    const interactiveElements = document.querySelectorAll('a, button, .product-card, .category-card');
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', function() {
-            cursor.classList.add('cursor-hover');
-            cursorDot.classList.add('cursor-hover');
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = Math.random() * 2 + 1;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(29, 78, 216, 0.5)';
+            ctx.fill();
+        }
+    }
+
+    // Create particles
+    for (let i = 0; i < 80; i++) {
+        particles.push(new Particle());
+    }
+
+    function connectParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 150) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(29, 78, 216, ${0.2 * (1 - distance / 150)})`;
+                    ctx.lineWidth = 1;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animateWireframe() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
         });
-        el.addEventListener('mouseleave', function() {
-            cursor.classList.remove('cursor-hover');
-            cursorDot.classList.remove('cursor-hover');
-        });
+
+        connectParticles();
+        animationFrameId = requestAnimationFrame(animateWireframe);
+    }
+
+    // Start animation when page is visible
+    if (document.visibilityState === 'visible') {
+        animateWireframe();
+    }
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            animateWireframe();
+        } else {
+            cancelAnimationFrame(animationFrameId);
+        }
     });
 
     // Text Reveal Animation
