@@ -90,7 +90,14 @@ async function handleLogin(e) {
             TechMart.showToast('Login successful! Redirecting...', 'success');
             
             setTimeout(() => {
-                window.location.href = 'index.html';
+                // Check if there's a redirect page
+                const redirectPage = localStorage.getItem('redirect_after_login');
+                if (redirectPage && redirectPage !== 'login.html') {
+                    localStorage.removeItem('redirect_after_login');
+                    window.location.href = redirectPage;
+                } else {
+                    window.location.href = 'index.html';
+                }
             }, 1500);
         } else {
             TechMart.showToast('Invalid email or password', 'error');
@@ -189,7 +196,14 @@ async function handleSignup(e) {
         TechMart.showToast('Account created successfully! Redirecting...', 'success');
         
         setTimeout(() => {
-            window.location.href = 'index.html';
+            // Check if there's a redirect page
+            const redirectPage = localStorage.getItem('redirect_after_login');
+            if (redirectPage && redirectPage !== 'login.html') {
+                localStorage.removeItem('redirect_after_login');
+                window.location.href = redirectPage;
+            } else {
+                window.location.href = 'index.html';
+            }
         }, 1500);
     }, 1000);
 }
