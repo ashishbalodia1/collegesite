@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Student Discount Banner -->
+    <div class="student-banner">
+        <div class="container">
+            <i class="fas fa-graduation-cap"></i>
+            <span>🎓 Student Special: Get EXTRA 20% OFF on all orders with Student ID! Use code: <strong>STUDENT20</strong></span>
+            <button class="close-banner"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -27,6 +36,7 @@
                     <a href="about.html">About</a>
                     <a href="feedback.html">Feedback</a>
                     <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="#" class="wishlist-btn"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
                     <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
                 </div>
                 <div class="hamburger">
@@ -42,9 +52,92 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Welcome to TechMart</h1>
-                <p>Discover amazing products at unbeatable prices</p>
-                <button class="cta-btn">Shop Now</button>
+                <span class="hero-badge">🎓 Student Marketplace</span>
+                <h1>Shop Smart, Save More</h1>
+                <p>Exclusive deals for students & young professionals</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-check-circle"></i> Student Discounts</span>
+                    <span><i class="fas fa-check-circle"></i> EMI Available</span>
+                    <span><i class="fas fa-check-circle"></i> Free Shipping</span>
+                </div>
+                <div class="hero-buttons">
+                    <button class="cta-btn primary">Shop Now</button>
+                    <button class="cta-btn secondary">View Deals</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals -->
+    <section class="flash-deals">
+        <div class="container">
+            <div class="flash-header">
+                <div>
+                    <h2><i class="fas fa-bolt"></i> Flash Deals</h2>
+                    <p>Limited time offers - Grab them fast!</p>
+                </div>
+                <div class="timer">
+                    <span>Ends in:</span>
+                    <div class="countdown">
+                        <div><span id="hours">12</span><small>hrs</small></div>
+                        <div><span id="minutes">34</span><small>min</small></div>
+                        <div><span id="seconds">56</span><small>sec</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flash-products">
+                <div class="flash-product-card">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&h=300&fit=crop" alt="Notebook">
+                    <span class="flash-badge">60% OFF</span>
+                    <h4>Premium Notebooks Set</h4>
+                    <div class="flash-price">
+                        <span class="current">₹199</span>
+                        <span class="original">₹499</span>
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-progress" style="width: 40%"></div>
+                        <span>Only 4 left!</span>
+                    </div>
+                </div>
+                <div class="flash-product-card">
+                    <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=300&h=300&fit=crop" alt="Laptop">
+                    <span class="flash-badge">40% OFF</span>
+                    <h4>Student Laptop Bundle</h4>
+                    <div class="flash-price">
+                        <span class="current">₹29,999</span>
+                        <span class="original">₹49,999</span>
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-progress" style="width: 20%"></div>
+                        <span>Only 2 left!</span>
+                    </div>
+                </div>
+                <div class="flash-product-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=300&fit=crop" alt="Smartwatch">
+                    <span class="flash-badge">50% OFF</span>
+                    <h4>Fitness Smartwatch</h4>
+                    <div class="flash-price">
+                        <span class="current">₹1,999</span>
+                        <span class="original">₹3,999</span>
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-progress" style="width: 65%"></div>
+                        <span>Selling fast!</span>
+                    </div>
+                </div>
+                <div class="flash-product-card">
+                    <img src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=300&h=300&fit=crop" alt="Headphones">
+                    <span class="flash-badge">45% OFF</span>
+                    <h4>Wireless Earbuds</h4>
+                    <div class="flash-price">
+                        <span class="current">₹1,099</span>
+                        <span class="original">₹1,999</span>
+                    </div>
+                    <div class="stock-bar">
+                        <div class="stock-progress" style="width: 30%"></div>
+                        <span>Hurry up!</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -93,12 +186,17 @@
         <div class="container">
             <h2 class="section-title">Featured Products</h2>
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card" data-product-id="1">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">20% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Electronics</span>
                         <h3>Premium Headphones</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -112,16 +210,21 @@
                             <span class="current-price">₹2,399</span>
                             <span class="original-price">₹2,999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product-id="2">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">30% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Wearables</span>
                         <h3>Smart Watch Pro</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -135,16 +238,21 @@
                             <span class="current-price">₹3,499</span>
                             <span class="original-price">₹4,999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product-id="3">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">15% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Fashion</span>
                         <h3>Designer Sunglasses</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -158,16 +266,21 @@
                             <span class="current-price">₹1,699</span>
                             <span class="original-price">₹1,999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product-id="4">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">25% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Sports</span>
                         <h3>Running Shoes</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -181,16 +294,21 @@
                             <span class="current-price">₹2,999</span>
                             <span class="original-price">₹3,999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product-id="5">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">40% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Accessories</span>
                         <h3>Laptop Backpack</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -204,16 +322,21 @@
                             <span class="current-price">₹1,199</span>
                             <span class="original-price">₹1,999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product-id="6">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=400&fit=crop" alt="Product">
                         <span class="discount-badge">10% OFF</span>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist-toggle" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
+                        <span class="product-category">Books</span>
                         <h3>Bestseller Book Set</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -227,7 +350,7 @@
                             <span class="current-price">₹899</span>
                             <span class="original-price">₹999</span>
                         </div>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -235,7 +358,149 @@
     </section>
 
     <!-- Features -->
-    <section class="features">
+    <section c
+
+    <!-- College Partnerships -->
+    <section class="partnerships">
+        <div class="container">
+            <h2 class="section-title">Trusted by 500+ Colleges Across India</h2>
+            <p class="section-subtitle">Official partner for campus shopping needs</p>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>IIT Delhi</h4>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>IIM Bangalore</h4>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>NIT Trichy</h4>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>BITS Pilani</h4>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>DTU Delhi</h4>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-university"></i>
+                    <h4>VIT Vellore</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="student-testimonials">
+        <div class="container">
+            <h2 class="section-title">What Students Say About Us</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"TechMart is a lifesaver! Got my laptop at 40% off with the student discount. Perfect for my semester projects!"</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Student">
+                            <div>
+                                <h4>Rahul Sharma</h4>
+                                <span>B.Tech, IIT Delhi</span>
+                                <div class="rating-small">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"Amazing service! They have everything a student needs from books to gadgets. The EMI option is super helpful!"</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" alt="Student">
+                            <div>
+                                <h4>Priya Patel</h4>
+                                <span>MBA, IIM Ahmedabad</span>
+                                <div class="rating-small">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"Fast delivery and genuine products. Saved a lot on textbooks and stationery. Highly recommend to fellow students!"</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop" alt="Student">
+                            <div>
+                                <h4>Arjun Verma</h4>
+                                <span>B.Sc, Delhi University</span>
+                                <div class="rating-small">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-rating" id="modalRating"></div>
+                    <div class="modal-price">
+                        <span class="modal-current-price" id="modalCurrentPrice"></span>
+                        <span class="modal-original-price" id="modalOriginalPrice"></span>
+                    </div>
+                    <div class="product-description">
+                        <h4>Product Description:</h4>
+                        <ul>
+                            <li>High-quality materials and construction</li>
+                            <li>Student-friendly pricing with warranty</li>
+                            <li>Perfect for college and personal use</li>
+                            <li>Includes all necessary accessories</li>
+                        </ul>
+                    </div>
+                    <div class="product-features">
+                        <span><i class="fas fa-check-circle"></i> Free Delivery</span>
+                        <span><i class="fas fa-check-circle"></i> 1 Year Warranty</span>
+                        <span><i class="fas fa-check-circle"></i> EMI Available</span>
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="btn-primary modal-add-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn-secondary modal-add-wishlist"><i class="far fa-heart"></i> Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>lass="features">
         <div class="container">
             <div class="features-grid">
                 <div class="feature-card">
@@ -310,5 +575,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/enhanced.js"></script>
 </body>
 </html>
