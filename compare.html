@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Products - TechMart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>TechMart</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="about.html">About</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="login.html" class="login-btn" id="authBtn">Login</a>
+                    <a href="wishlist.html" class="wishlist-btn"><i class="fas fa-heart"></i><span class="wishlist-count">0</span></a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="compare-page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-balance-scale"></i> Compare Products</h1>
+                <p>Compare features, prices, and specs to make the best choice</p>
+            </div>
+
+            <!-- Empty Compare -->
+            <div class="empty-compare" style="display: none;">
+                <i class="fas fa-balance-scale"></i>
+                <h2>No products to compare</h2>
+                <p>Add products to compare their features and prices</p>
+                <a href="index.html" class="btn-primary">Browse Products</a>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-container">
+                <div class="comparison-header">
+                    <h3>Product Comparison</h3>
+                    <button class="btn-secondary clear-comparison">
+                        <i class="fas fa-times"></i> Clear All
+                    </button>
+                </div>
+
+                <div class="comparison-table">
+                    <!-- Comparison will be loaded here -->
+                </div>
+
+                <div class="comparison-actions">
+                    <a href="index.html" class="btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechMart</h3>
+                    <p>Your one-stop shop for all electronics and gadgets. Special student discounts available!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 1234567890</li>
+                        <li><i class="fas fa-envelope"></i> support@techmart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechMart. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/compare.js"></script>
+</body>
+</html>
