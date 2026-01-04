@@ -2531,14 +2531,14 @@ footer {
 .chatbot-toggle {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #10B981, #059669);
+    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 24px;
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -2552,7 +2552,7 @@ footer {
 
 .chatbot-toggle:hover {
     transform: scale(1.1);
-    box-shadow: 0 12px 32px rgba(16, 185, 129, 0.6);
+    box-shadow: 0 12px 32px rgba(29, 78, 216, 0.6);
     animation: none;
 }
 
@@ -2587,7 +2587,7 @@ footer {
 }
 
 .chatbot-header {
-    background: linear-gradient(135deg, #10B981, #059669);
+    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
     color: white;
     padding: 20px;
     display: flex;
@@ -2679,7 +2679,7 @@ footer {
 .message-avatar {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #10B981, #059669);
+    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2762,13 +2762,13 @@ footer {
 
 .chatbot-input input:focus {
     outline: none;
-    border-color: #10B981;
+    border-color: #1D4ED8;
 }
 
 .chatbot-send {
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, #10B981, #059669);
+    background: linear-gradient(135deg, #1D4ED8, #1E40AF);
     border: none;
     border-radius: 12px;
     color: white;
@@ -2782,7 +2782,7 @@ footer {
 
 .chatbot-send:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
 }
 
 /* Profile Page */
@@ -3195,7 +3195,7 @@ footer {
 
 .badge-success {
     padding: 8px 16px;
-    background: #10B981;
+    background: #1D4ED8;
     color: white;
     border-radius: 20px;
     font-size: 12px;
