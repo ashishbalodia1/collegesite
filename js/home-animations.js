@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(29, 78, 216, 0.5)';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
             ctx.fill();
         }
     }
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (distance < 150) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(29, 78, 216, ${0.2 * (1 - distance / 150)})`;
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.3 * (1 - distance / 150)})`;
                     ctx.lineWidth = 1;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
